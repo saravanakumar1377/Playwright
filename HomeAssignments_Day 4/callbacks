@@ -1,0 +1,19 @@
+
+// 1. Declare a global variable
+let browser = "Chrome";
+
+// Create a function that accepts a callback
+function checkBrowserVersion(callback) {
+  
+  setTimeout(() => {
+    
+    callback(browser);
+    
+  }, 2000);
+}
+
+function displayBrowserVersion(browserName) {
+  console.log("Browser version using callback:", browserName);
+}
+
+checkBrowserVersion(displayBrowserVersion);
