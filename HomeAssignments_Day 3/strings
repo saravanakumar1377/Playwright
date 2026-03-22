@@ -1,0 +1,26 @@
+let input = "NOON";
+
+function reverseTheString(input) {
+    let splitChars = input.split('');
+    let reversedString = "";
+
+    for (let i = splitChars.length - 1; i >= 0; i--) {
+        reversedString = reversedString + splitChars[i];
+    }
+
+    console.log("Reversed String:", reversedString);
+    return reversedString;
+}
+
+function isPalindrome(input, reversed) {
+    if (input === reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let reversed = reverseTheString(input);
+let result = isPalindrome(input, reversed);
+
+console.log("Is Palindrome ?", result);

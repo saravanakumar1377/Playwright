@@ -1,0 +1,61 @@
+
+//Example 1
+let s = "Hello World" 
+function lengthOfLastWord(s) {
+    // Split the string into words
+    let words = s.split(" ");
+    console.log(words);
+    
+    // Find the last word
+    let lastWord = words[words.length - 1];
+    console.log(lastWord);
+    
+    // Calculate and return length
+  console.log(lastWord.length);
+
+}
+lengthOfLastWord(s);
+
+console.log("----------------------------------------------------");
+
+
+//Example 2
+
+let t = "   fly me   to   the moon  ";
+function trimTheString(t){
+let trimmedString = t.trim();
+console.log(trimmedString);
+
+//let splitStringToWords = trimmedString.split(" ");
+let splitStringToWords = trimmedString.split(/\s+/);
+console.log(splitStringToWords);
+let identifyLastWord = splitStringToWords[splitStringToWords.length-1]
+console.log(identifyLastWord);
+let ReturnTheLength = identifyLastWord.length;
+console.log(ReturnTheLength);
+
+}
+trimTheString(t);
+
+console.log("----------------------------------------------------");
+
+//Example 3
+
+let str1 = "listen"
+let str2 = "Silent"
+
+function isAnagram(str1, str2) {
+    // Remove spaces and convert to same case
+    let s1 = str1.replace(/\s+/g, "").toLowerCase();
+    let s2 = str2.replace(/\s+/g, "").toLowerCase();
+
+    // Sort the characters
+    let sorted1 = s1.split("").sort().join("");
+    let sorted2 = s2.split("").sort().join("");
+
+    // Compare sorted strings and return result
+    return sorted1 === sorted2;
+}
+
+let anagramResult1 = isAnagram(str1, str2);
+console.log("Are 'listen' and 'silent' anagrams?", anagramResult1);
